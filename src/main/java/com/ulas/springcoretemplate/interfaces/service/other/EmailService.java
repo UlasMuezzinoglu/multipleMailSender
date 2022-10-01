@@ -16,6 +16,4 @@ public interface EmailService {
     FreeMarkerConfigurationFactoryBean getFreeMarkerConfiguration();
 
     Resource getResourceFile(String name);
-
-    void sendMailFromAdmin(String message, String title, List<String> emails);
 }
