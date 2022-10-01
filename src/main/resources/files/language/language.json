@@ -1,0 +1,44 @@
+[
+  {
+    "SUCCESS": {
+      "0001": "E-mail adresiniz başarıyla doğrulandı.",
+      "0002": "E-mail adresinize doğrulama kodu gönderildi. Lütfen mail kutunuzu kontrol ediniz.",
+      "0004": "Başarılı",
+      "0005": "Silme işlemi başarılı",
+      "0006": "Geri bildiriminiz için teşekkür ederiz. En kısa sürede değerlendireceğiz."
+    },
+    "ERROR": {
+      "0000": "Lütfen tüm parametreleri eksiksiz giriniz...",
+      "0001": "Geçersiz karakter girdiniz...",
+      "0002": "Kullanıcı bulunamadı",
+      "0003": "Girilen id geçersiz",
+      "0004": "Geçersiz işlem",
+      "0005": "Zaman aşımı"
+    },
+    "TEXT": {
+      "test": "test"
+    },
+    "language": "tr-TR"
+  },
+  {
+    "SUCCESS": {
+      "0001": "Your e-mail address is verified successfully.",
+      "0002": "We have sent a verification code to your E-mail address. You can check your message box.",
+      "0004": "Success",
+      "0005": "Delete operation is done successfully",
+      "0006": "Thank you for your feedback. Your complaint will be carefully evaluated."
+    },
+    "ERROR": {
+      "0000": "Invalid Parameter",
+      "0001": "Invalid Character",
+      "0002": "User Not Found",
+      "0003": "Invalid id",
+      "0004": "Invalid Operation",
+      "0005": "Timeout"
+    },
+    "TEXT": {
+      "test": "test"
+    },
+    "language": "en-US"
+  }
+]
