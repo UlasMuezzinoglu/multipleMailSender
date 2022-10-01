@@ -6,7 +6,6 @@ import com.ulas.springcoretemplate.property.EmailProperties;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import lombok.RequiredArgsConstructor;
-import lombok.SneakyThrows;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -69,15 +68,14 @@ public class EmailServiceImpl implements EmailService {
                 for (Map.Entry<String, String> entry : attachmentNameAndPath.entrySet())
                     messageHelper.addAttachment(entry.getKey(), getResourceFile(entry.getValue()).getFile()); // fileName = "mmm", filePath = "static/mmm.png"
 
-            if (includeCC){
+            if (includeCC) {
                 String[] emailAddreses = new String[emails.size()];
                 messageHelper.setTo(emails.toArray(emailAddreses));
                 messageHelper.setFrom("mail", "Project");
                 messageHelper.setSubject(subject);
                 messageHelper.setText(html, true);
                 mailSender.send(message);
-            }
-            else {
+            } else {
                 emails.forEach(item -> {
                     try {
                         messageHelper.setTo(item);
@@ -86,12 +84,11 @@ public class EmailServiceImpl implements EmailService {
                         messageHelper.setText(html, true);
 
                         mailSender.send(message);
-                    }catch (Exception ex) {
+                    } catch (Exception ex) {
                         ex.printStackTrace();
                     }
                 });
             }
-
 
 
         } catch (Exception ex) {
