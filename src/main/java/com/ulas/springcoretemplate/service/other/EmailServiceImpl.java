@@ -17,7 +17,6 @@ import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 
 import javax.mail.internet.MimeMessage;
 import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -108,17 +107,5 @@ public class EmailServiceImpl implements EmailService {
     @Override
     public Resource getResourceFile(String name) {
         return resourceLoader.getResource("classpath:" + name);
-    }
-
-    @Async("threadPoolTaskExecutor")
-    public void sendMailFromAdmin(String message, String title, List<String> emails) {
-        String templateName = "emailAssets/templates/toUserFromAdmin.ftl";
-        Map<String, String> attachments = null;
-        Map<String, String> model = new HashMap<>();
-
-        model.put("MESSAGE", message);
-        for (String email : emails) {
-            send(email, title, templateName, attachments, model);
-        }
     }
 }
